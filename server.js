@@ -34,5 +34,8 @@ server.post('/hiscore', function(req, res){
 //     res.send("Page not found!", 404);
 // })
 
-server.listen(80);
-console.log("Web server on port 8080");
+const PORT = process.env.PORT || 3000;
+
+server.listen(PORT, () => {
+    console.log(`Web server running on port ${PORT}`);
+});
